@@ -1,0 +1,37 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: "Montserrat", sans-serif;
+
+  /* Color variables */
+  --main: #0AF;
+  --dark: #000;
+  --light: #FFF;
+
+  /* Theme depends on system settings */
+  color-scheme: light dark;
+  --text: light-dark(var(--dark), var(--light));
+  --background: light-dark(var(--light), var(--dark));
+
+  /* Applying theme */
+  color: var(--text);
+  background-color: var(--background);
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100dvh;
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 800;
+  }
+}
