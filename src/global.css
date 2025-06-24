@@ -1,37 +1,39 @@
-*, *::after, *::before {
+:root {
+  font-family: "Montserrat", sans-serif;
+
+  /* Color variables */
+  --main: #0af;
+  --dark: #000;
+  --light: #fff;
+
+  /* Theme depends on system settings */
+  color-scheme: light dark;
+  --primary: light-dark(var(--dark), var(--light));
+  --secondary: light-dark(var(--light), var(--dark));
+
+  /* Applying theme */
+  color: var(--primary);
+  background-color: var(--secondary);
+}
+
+/* RESET STYLES */
+
+*,
+*::after,
+*::before {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-:root {
-  font-family: "Montserrat", sans-serif;
-
-  /* Color variables */
-  --main: #0AF;
-  --dark: #000;
-  --light: #FFF;
-
-  /* Theme depends on system settings */
-  color-scheme: light dark;
-  --text: light-dark(var(--dark), var(--light));
-  --background: light-dark(var(--light), var(--dark));
-
-  /* Applying theme */
-  color: var(--text);
-  background-color: var(--background);
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
 }
 
-.App {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  min-height: 100dvh;
-
-  h1 {
-    font-size: 3rem;
-    font-weight: 800;
-  }
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
 }

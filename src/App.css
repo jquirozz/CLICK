@@ -1,0 +1,27 @@
+.App {
+  display: grid;
+  grid-template-columns: auto 1fr;
+
+  height: 100dvh;
+
+  /* .NavBar {} */
+
+  .screen {
+    scrollbar-gutter: stable;
+    overflow: auto;
+
+    color: var(--secondary);
+    background-color: var(--main);
+  }
+}
+
+@media (width < 600px) {
+  .App {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+  }
+
+  .screen {
+    order: -1;
+  }
+}

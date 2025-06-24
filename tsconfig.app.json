@@ -3,6 +3,11 @@
     /* Aliases */
     "baseUrl": ".", 
     "paths": {
+      "@/components/*": ["./src/shared/components/*"],
+      "@/feed/*": ["./src/features/feed/*"],
+      "@/explore/*": ["./src/features/explore/*"],
+      "@/profile/*": ["./src/features/profile/*"],
+      "@/settings/*": ["./src/features/settings/*"],
       "@/*": ["./src/*"],
     },
 
