@@ -1,12 +1,12 @@
-import { useState, type JSX } from "react";
+import { useState } from "react";
 import { useLocation, NavLink } from "react-router-dom";
 
-import "./NavBar.css";
+import type { LinkProps } from "./types";
+
+import "./Navbar.css";
 import {
   IoMenuOutline,
   IoCloseOutline,
-  IoFolderSharp,
-  IoFolderOutline,
   IoNavigateSharp,
   IoNavigateOutline,
   IoGrid,
@@ -17,31 +17,18 @@ import {
   IoSettingsOutline,
 } from "react-icons/io5";
 
-interface LinkProps {
-  to: string;
-  active_icon: JSX.Element;
-  default_icon: JSX.Element;
-  label: string;
-}
-
 const MAIN_LINKS = [
   {
     to: "/",
-    active_icon: <IoFolderSharp />,
-    default_icon: <IoFolderOutline />,
     label: "Home",
+    active_icon: <IoNavigateSharp />,
+    default_icon: <IoNavigateOutline />,
   },
   {
     to: "/explore",
-    active_icon: <IoNavigateSharp />,
-    default_icon: <IoNavigateOutline />,
     label: "Explore",
-  },
-  {
-    to: "/explore/collections",
     active_icon: <IoGrid />,
     default_icon: <IoGridOutline />,
-    label: "Collections",
   },
 ];
 
@@ -60,7 +47,7 @@ const PROFILE_LINKS = [
   },
 ];
 
-export default function NavBar() {
+export default function Navbar() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const { pathname } = useLocation();
 
@@ -76,7 +63,7 @@ export default function NavBar() {
   );
 
   return (
-    <nav className={`NavBar ${isOpen ? "show" : ""}`}>
+    <nav className={`Navbar ${isOpen ? "show" : ""}`}>
       <header>
         <a onClick={handleMenu}>
           {isOpen ? <IoCloseOutline /> : <IoMenuOutline />}

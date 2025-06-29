@@ -1,4 +1,4 @@
-.NavBar {
+.Navbar {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -10,6 +10,8 @@
   overflow: hidden;
   width: 4rem;
   transition: width 300ms ease-in-out;
+
+  background-color: light-dark(#f5f5f5, #050505);
 
   header,
   section,
@@ -31,9 +33,10 @@
     transition: color 150ms ease-in-out, background-color 150ms ease-in-out;
     transition-delay: 50ms;
 
+    color: var(--primary);
+
     svg {
       font-size: 1.5rem;
-      color: var(--text);
       flex-shrink: 0; /* Avoid shrink */
     }
 
@@ -47,12 +50,8 @@
   }
 
   /* Animate: invert colors on hover */
-  a:hover {
-    color: var(--secondary);
-    background-color: var(--primary);
-  }
-
   /* Do not animate if active */
+  a:hover,
   a.active {
     color: var(--secondary);
     background-color: var(--primary);
@@ -60,7 +59,7 @@
 }
 
 /* Open navbar */
-.NavBar.show {
+.Navbar.show {
   width: 11rem;
 
   a > h3 {
@@ -72,7 +71,7 @@
 /* Mobile navigation bar */
 @media (width < 600px) {
   /* Horizontal navbar */
-  .NavBar {
+  .Navbar {
     flex-direction: row;
     width: 100%;
     height: 3.5rem;
@@ -121,7 +120,7 @@
     }
   }
 
-  .NavBar.show {
+  .Navbar.show {
     width: 100%;
   }
 }

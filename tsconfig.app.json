@@ -3,12 +3,14 @@
     /* Aliases */
     "baseUrl": ".", 
     "paths": {
-      "@/components/*": ["./src/shared/components/*"],
-      "@/feed/*": ["./src/features/feed/*"],
-      "@/explore/*": ["./src/features/explore/*"],
-      "@/profile/*": ["./src/features/profile/*"],
-      "@/settings/*": ["./src/features/settings/*"],
-      "@/*": ["./src/*"],
+      "@/Explore/*": ["src/domains/Explore/*"],
+      "@/Post/*": ["src/domains/Post/*"],
+      "@/Profile/*": ["src/domains/Profile/*"],
+      "@/Public/*": ["src/domains/Public/*"],
+      "@/Settings/*": ["src/domains/Settings/*"],
+      "@/services/*": ["src/services/*"],
+      "@/components/*": ["src/components/*"],
+      "@/*": ["src/*"],
     },
 
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",

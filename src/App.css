@@ -9,9 +9,7 @@
   .screen {
     scrollbar-gutter: stable;
     overflow: auto;
-
-    color: var(--secondary);
-    background-color: var(--main);
+    background-color: #252525;
   }
 }
 

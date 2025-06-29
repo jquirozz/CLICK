@@ -2,9 +2,9 @@
   font-family: "Montserrat", sans-serif;
 
   /* Color variables */
-  --main: #0af;
-  --dark: #000;
-  --light: #fff;
+  --main: #0ca;
+  --dark: #151515;
+  --light: #e5e5e5;
 
   /* Theme depends on system settings */
   color-scheme: light dark;

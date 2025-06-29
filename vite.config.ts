@@ -6,11 +6,13 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@/components': path.resolve(__dirname, './src/shared/components'), 
-      '@/feed': path.resolve(__dirname, './src/features/feed'), 
-      '@/profile': path.resolve(__dirname, './src/features/profile'), 
-      '@/explore': path.resolve(__dirname, './src/features/explore'), 
-      '@/settings': path.resolve(__dirname, './src/features/settings'), 
+      '@/Explore': path.resolve(__dirname, './src/domains/Explore'), 
+      '@/Post': path.resolve(__dirname, './src/domains/Post'),
+      '@/Profile': path.resolve(__dirname, './src/domains/Profile'),
+      '@/Public': path.resolve(__dirname, './src/domains/Public'),
+      '@/Settings': path.resolve(__dirname, './src/domains/Settings'),
+      '@/services': path.resolve(__dirname, './src/services'), 
+      '@/components': path.resolve(__dirname, './src/components'), 
       '@': path.resolve(__dirname, './src'),
     },
   },
